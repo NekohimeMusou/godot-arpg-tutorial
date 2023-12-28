@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://bjqn1cchl3aec"]
+[gd_scene load_steps=13 format=3 uid="uid://bjqn1cchl3aec"]
 
+[ext_resource type="Script" path="res://scenes/world.gd" id="1_764im"]
 [ext_resource type="PackedScene" uid="uid://bal771n1xd7am" path="res://player/player.tscn" id="1_iytwu"]
 [ext_resource type="Texture2D" uid="uid://dnfiybu446iwx" path="res://art/TilesetFloor.png" id="2_djore"]
 [ext_resource type="Texture2D" uid="uid://crcaelcxxfqdp" path="res://art/TilesetNature.png" id="3_2ip5i"]
@@ -3362,6 +3363,7 @@ sources/3 = SubResource("TileSetAtlasSource_hefrw")
 
 [node name="World" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_764im")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -3411,9 +3413,3 @@ position = Vector2(-40, 0)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="heartsContainer" parent="CanvasLayer" instance=ExtResource("7_0ejdq")]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
-offset_right = 0.0
-grow_horizontal = 0
