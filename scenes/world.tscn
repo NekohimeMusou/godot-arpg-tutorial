@@ -3399,3 +3399,10 @@ endPoint = NodePath("Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="Slime2"]
 position = Vector2(-24, 24)
+
+[node name="Slime3" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("6_ekomc")]
+position = Vector2(152, 120)
+endPoint = NodePath("Marker2D")
+
+[node name="Marker2D" type="Marker2D" parent="Slime3"]
+position = Vector2(-40, 0)
