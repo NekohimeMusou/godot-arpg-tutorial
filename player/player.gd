@@ -2,6 +2,10 @@ extends CharacterBody2D
 
 @export var speed: int = 80
 @onready var animations = $AnimationPlayer
+#@onready var hurtColor = $Sprite2D/ColorRect
+
+@export var maxHealth = 3
+@onready var currentHealth: int = maxHealth
 
 func handleInput():
 	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -25,7 +29,7 @@ func handleCollision():
 		var collider = collision.get_collider()
 		print_debug(collider.name)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	handleInput()
 	move_and_slide()
 	handleCollision()
@@ -34,4 +38,7 @@ func _physics_process(delta):
 
 func _on_hurt_box_area_entered(area):
 	if area.name == "hitBox":
-		print_debug(area.get_parent().name)
+		currentHealth -= 1
+		if currentHealth < 0:
+			currentHealth = maxHealth
+		print_debug(currentHealth)

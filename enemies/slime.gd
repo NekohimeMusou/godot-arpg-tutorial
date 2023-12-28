@@ -36,7 +36,7 @@ func updateAnimation():
 
 		animations.play("walk" + direction)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	updateVelocity()
 	move_and_slide()
 	updateAnimation()
