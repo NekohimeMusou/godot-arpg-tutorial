@@ -7,3 +7,4 @@
 script = ExtResource("1_x486c")
 name = "lifePot"
 texture = ExtResource("2_iku4c")
+maxStack = 4
