@@ -1,10 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbm0b3ga8ux6f"]
+[gd_scene load_steps=3 format=3 uid="uid://dbm0b3ga8ux6f"]
 
 [ext_resource type="Texture2D" uid="uid://cvfblrp700ym6" path="res://art/inventorySlot.png" id="1_26iwl"]
 [ext_resource type="Script" path="res://gui/slotGui.gd" id="1_odljy"]
-[ext_resource type="FontFile" uid="uid://cym5oy3vkf1xc" path="res://art/NormalFont.ttf" id="3_sro1q"]
 
-[node name="slot" type="Panel"]
+[node name="slot" type="Button"]
 self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(20, 20)
 offset_right = 20.0
@@ -21,21 +20,3 @@ custom_minimum_size = Vector2(20, 20)
 layout_mode = 0
 offset_right = 20.0
 offset_bottom = 20.0
-
-[node name="Panel" type="Panel" parent="CenterContainer"]
-layout_mode = 2
-
-[node name="item" type="Sprite2D" parent="CenterContainer/Panel"]
-
-[node name="Label" type="Label" parent="CenterContainer/Panel"]
-layout_mode = 0
-offset_left = -2.0
-offset_top = -1.0
-offset_right = 9.0
-offset_bottom = 12.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_sro1q")
-theme_override_font_sizes/font_size = 8
-text = "99"
-horizontal_alignment = 2
